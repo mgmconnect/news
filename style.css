@@ -4,6 +4,8 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
   }
+  html{scroll-behavior: smooth;}
+
   body {
     background-color: #f3f3f3;
   }
@@ -29,6 +31,8 @@
     letter-spacing: 5px;
   }
   .container {
+    opacity: 0;
+    transition: all 1s;
     width: 90%;
     margin: 0 auto;
     display: grid;
@@ -39,7 +43,12 @@
     border-radius:10px;
     text-align: center;
     margin-top: 40px;
-   
+   margin-bottom:30px;
+   transform: translateX(-100%);
+  }
+  .show{
+    opacity: 1;
+    transform: translateX(0);
   }
   @media only screen and (max-width: 768px) {
     .container {
